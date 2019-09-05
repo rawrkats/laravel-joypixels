@@ -57,7 +57,7 @@
                 "RawrSocial\\LaravelJoyPixels\\LaravelJoyPixelsServiceProvider"
             ],
             "aliases": {
-                "LaravelEmojiOne": "RawrSocial\\LaravelJoyPixels\\LaravelJoyPixelsFacade"
+                "LaravelJoyPixels": "RawrSocial\\LaravelJoyPixels\\LaravelJoyPixelsFacade"
             }
         }
     },
