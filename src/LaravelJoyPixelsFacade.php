@@ -1,12 +1,12 @@
 <?php
-namespace ChristofferOK\LaravelEmojiOne;
+namespace RawrSocial\LaravelJoyPixels;
 
 use Illuminate\Support\Facades\Facade;
 
-class LaravelEmojiOneFacade extends Facade
+class LaravelJoyPixelsFacade extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return LaravelEmojiOne::class;
+        return LaravelJoyPixels::class;
     }
 }

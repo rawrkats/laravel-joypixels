@@ -1,11 +1,11 @@
 <?php
 
-namespace ChristofferOK\LaravelEmojiOne;
+namespace RawrSocial\LaravelJoyPixels;
 
 use Emojione\Client;
 use Emojione\Ruleset;
 
-class LaravelEmojiOne
+class LaravelJoyPixels
 {
     private $client;
 
@@ -13,22 +13,22 @@ class LaravelEmojiOne
     {
         $this->client = new Client(new Ruleset());
 
-        $this->client->emojiSize = config('emojione.emojiSize');
-        $this->client->sprites = config('emojione.sprites');
-        $this->client->spriteSize = config('emojione.spriteSize');
-        $this->client->emojiVersion = config('emojione.emojiVersion');
+        $this->client->emojiSize = config('joypixels.emojiSize');
+        $this->client->sprites = config('joypixels.sprites');
+        $this->client->spriteSize = config('joypixels.spriteSize');
+        $this->client->emojiVersion = config('joypixels.emojiVersion');
 
-        if (config('emojione.imagePathPNG')) {
-            $this->client->imagePathPNG = url(config('emojione.imagePathPNG')) . '/';
+        if (config('joypixels.imagePathPNG')) {
+            $this->client->imagePathPNG = url(config('joypixels.imagePathPNG')) . '/';
         }
         else {
             // Use the CDN if 'imagePathPNG' config is not set
             $this->client->imagePathPNG = 'https://cdn.jsdelivr.net/emojione/assets' . '/' . $this->client->emojiVersion . '/png/' . $this->client->emojiSize . '/';
         }
-        
-        // config ascii option added ternary incase option isn't part of config 
-        $this->client->ascii = config('emojione.ascii') ? true : false;
-        
+
+        // config ascii option added ternary incase option isn't part of config
+        $this->client->ascii = config('joypixels.ascii') ? true : false;
+
     }
 
     public function toImage($str)

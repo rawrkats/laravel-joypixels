@@ -1,15 +1,18 @@
 {
-    "name": "christofferok/laravel-emojione",
+    "name": "rawrkats/laravel-joypixels",
     "type": "library",
-    "description": "Laravel helper for EmojiOne",
+    "description": "Laravel helper for Joypixels, Formerly EmojiOne",
     "keywords": [
         "ChristofferOK",
         "LaravelEmojiOne",
         "laravel",
         "emoji",
-        "emojione"
+        "emojione",
+        "joypixels",
+        "LaravelJoyPixels",
+        "rawr"
     ],
-    "homepage": "https://github.com/christofferok/LaravelEmojiOne",
+    "homepage": "https://github.com/rawrkats/LaravelJoypixels",
     "license": "MIT",
     "authors": [
         {
@@ -17,15 +20,21 @@
             "email": "korvald@gmail.com",
             "homepage": "https://christofferok.com",
             "role": "Developer"
+        },
+        {
+            "name": "Kat Hoff",
+            "email": "rawrkats@me.com",
+            "homepage": "https://kat.land",
+            "role": "Developer"
         }
     ],
     "require": {
         "php": "~5.6|~7.0",
-        "emojione/emojione": "^4.0.0",
+        "joypixels/emoji-toolkit": "^5.0",
         "illuminate/support": "~5.1"
     },
     "suggest": {
-        "emojione/assets": "If you want to serve the emojione assets yourself"
+        "joypixels/assets": "If you want to serve the emojione assets yourself"
     },
     "require-dev": {
         "phpunit/phpunit" : "~4.0||~5.0",
@@ -33,22 +42,22 @@
     },
     "autoload": {
         "psr-4": {
-            "ChristofferOK\\LaravelEmojiOne\\": "src"
+            "RawrSocial\\LaravelJoyPixels\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "ChristofferOK\\LaravelEmojiOne\\": "tests"
+            "RawrSocial\\LaravelJoyPixels\\": "tests"
         }
     },
     "scripts": {},
     "extra": {
         "laravel": {
             "providers": [
-                "ChristofferOK\\LaravelEmojiOne\\LaravelEmojiOneServiceProvider"
+                "RawrSocial\\LaravelJoyPixels\\LaravelJoyPixelsServiceProvider"
             ],
             "aliases": {
-                "LaravelEmojiOne": "ChristofferOK\\LaravelEmojiOne\\LaravelEmojiOneFacade"
+                "LaravelEmojiOne": "RawrSocial\\LaravelJoyPixels\\LaravelJoyPixelsFacade"
             }
         }
     },

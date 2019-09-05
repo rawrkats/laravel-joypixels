@@ -1,35 +1,35 @@
 <?php
 
-namespace ChristofferOK\LaravelEmojiOne;
+namespace RawrSocial\LaravelJoyPixels;
 
 use Illuminate\Contracts\Container\Container;
 use Illuminate\Support\ServiceProvider;
 
-class LaravelEmojiOneServiceProvider extends ServiceProvider
+class LaravelJoyPixelsServiceProvider extends ServiceProvider
 {
 
     public function boot()
     {
-        $this->publishes([__DIR__.'/../config/emojione.php' => config_path('emojione.php')], 'config');
+        $this->publishes([__DIR__ . '/../config/joypixels.php' => config_path('joypixels.php')], 'config');
 
         $this->publishes([
-            base_path('vendor/emojione/assets/png') => public_path('vendor/emojione/png'),
+            base_path('vendor/joypixels/assets/png') => public_path('vendor/joypixels/png'),
         ], 'public');
 
         $this->publishes([
-            base_path('vendor/emojione/assets/sprites') => public_path('vendor/emojione/sprites'),
+            base_path('vendor/joypixels/assets/sprites') => public_path('vendor/joypixels/sprites'),
         ], 'sprites');
 
-        \Blade::directive('emojione', function ($expression) {
-            return "<?php echo \App::make('".LaravelEmojiOne::class."')->toImage($expression); ?>";
+        \Blade::directive('joypixels', function ($expression) {
+            return "<?php echo \App::make('".LaravelJoyPixels::class."')->toImage($expression); ?>";
         });
     }
 
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__.'/../config/emojione.php', 'emojione');
-        $this->app->singleton(LaravelEmojiOne::class, function (Container $app) {
-            return new LaravelEmojiOne();
+        $this->mergeConfigFrom(__DIR__ . '/../config/joypixels.php', 'emojione');
+        $this->app->singleton(LaravelJoyPixels::class, function (Container $app) {
+            return new LaravelJoyPixels();
         });
     }
 }
