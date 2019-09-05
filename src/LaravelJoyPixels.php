@@ -2,8 +2,8 @@
 
 namespace RawrSocial\LaravelJoyPixels;
 
-use Emojione\Client;
-use Emojione\Ruleset;
+use JoyPixels\Client;
+use JoyPixels\Ruleset;
 
 class LaravelJoyPixels
 {
