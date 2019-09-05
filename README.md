@@ -9,6 +9,9 @@
 Laravel package to make it easier working with the gorgeous emojis from [Joypixels](https://joypixels.com/). 
 
 Remember to read the [Joypixels Free License](https://www.joypixels.com/licenses/free) and provide the appropriate attribution. Or buy a  [premium license](https://www.joypixels.com/licenses/premium)
+##
+This code was written by [ChristofferOK](https://github.com/christofferok) and only changed references from emojione to joypixels since they changed their name.
+
 
 ## installation
 Via Composer
