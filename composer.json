@@ -12,19 +12,19 @@
         "LaravelJoyPixels",
         "rawr"
     ],
-    "homepage": "https://github.com/rawrkats/LaravelJoypixels",
+    "homepage": "https://github.com/rawrkats/laravel-joypixels",
     "license": "MIT",
     "authors": [
-        {
-            "name": ":Christoffer Korvald",
-            "email": "korvald@gmail.com",
-            "homepage": "https://christofferok.com",
-            "role": "Developer"
-        },
         {
             "name": "Kat Hoff",
             "email": "rawrkats@me.com",
             "homepage": "https://kat.land",
+            "role": "Developer"
+        },
+        {
+            "name": ":Christoffer Korvald",
+            "email": "korvald@gmail.com",
+            "homepage": "https://christofferok.com",
             "role": "Developer"
         }
     ],
